@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+  body { background: #efeae2; display: flex; justify-content: center; align-items: center; height: 100vh; }
+  
+  .phone {
+    width: 100%;
+    max-width: 400px;
+    height: 90vh;
+    background: #efeae2 url('https://user-images.githubusercontent.com/15075759/28719144-86da7762-73d2-11e7-911d-60d70fcded21.png');
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .header {
+    background: #075e54;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header img {
+    width: 40px; height: 40px; border-radius: 50%; background: #ccc;
+  }
+  .header .info { flex: 1; }
+  .header .name { font-weight: 600; font-size: 16px; }
+  .header .status { font-size: 12px; opacity: 0.8; }
+
+  .chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .msg {
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    word-wrap: break-word;
+  }
+  .msg .time {
+    font-size: 11px;
+    color: #667781;
+    float: right;
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+
+  .msg.left {
+    background: white;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+  }
+  .msg.right {
+    background: #d9fdd3;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+  }
+  .msg.right .double-tick { color: #53bdeb; }
+
+  .emoji { font-size: 28px; align-self: flex-start; }
+
+  .footer {
+    background: #f0f0f0;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    outline: none;
+    background: white;
+  }
+  .footer .mic {
+    background: #25d366;
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="phone">
+  <div class="header">
+    <span>←</span>
+    <img src="https://i.ibb.co/8gkX15M1/ic-launcher.png" alt="dp">
+    <div class="info">
+      <div class="name">♥‿♥ 🥰</div>
+      <div class="status">last seen today at 3:48 PM</div>
+    </div>
+    <span>⋮</span>
+  </div>
+
+  <div class="chat-box">
+    <div class="msg left">You<br><i>hum</i></div>
+    <div class="msg left">Han <span class="time">3:46 PM</span></div>
+    <div class="msg left">B's har waqat online show hota na <span class="time">3:46 PM</span></div>
+    
+    <div class="emoji">😂</div>
+    
+    <div class="msg left">Oy otar kyun dia <span class="time">3:47 PM</span></div>
+    <div class="msg right">sai <span class="time">3:47 PM <span class="double-tick">✓</span></span></div>
+    
+    <div class="msg left">Chalo hun <span class="time">3:47 PM</span></div>
+    <div class="msg right">AUR KYA KARO <span class="time">3:47 PM <span class="double-tick">✓</span></span></div>
+    
+    <div class="msg left">You<br><s>AUR KYA KARO</s></div>
+    <div class="msg left">Sai <span class="time">3:47 PM</span></div>
+    <div class="msg left">Chal Khana kha ky pher <span class="time">3:47 PM</span></div>
+    <div class="msg left">Otha Jo bary time sy tho <span class="time">3:47 PM</span></div>
+  </div>
+
+  <div class="footer">
+    <input type="text" placeholder="Message">
+    <div class="mic">🎤</div>
+  </div>
+</div>
+
+</body>
+</html>
